@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/library
+    username: postgres
+    password: 12345678
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    change-log: classpath:liquibase/db.changelog.yaml
+    enabled: true
+    default-schema: public
+
+security:
+  jwt:
+    secret: YXNkYXNkYXNkYXNmc2RmbXNhZGtvaGZpb3NkdWpmb2RzamZrZGZqT0lBREZKRElPU0pGRElPU0pG
+    access:  120000
+    refresh: 2592000000
+
+
